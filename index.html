@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chart App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library, this could be replaced with a local library by downloading (wget) the library and linking to it -->
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Chart App</h1>
+        
+        <div class="trendline-info">
+            <p id="trendline-equation">Add points to see the trendline equation</p>
+        </div>
+        
+        <div class="chart-container">
+            <canvas id="dataChart"></canvas>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="x-input">X Value:</label>
+                <input type="number" id="x-input" step="any">
+            </div>
+            
+            <div class="input-group">
+                <label for="y-input">Y Value:</label>
+                <input type="number" id="y-input" step="any">
+            </div>
+            
+            <button id="add-point">Add Point</button>
+            <button id="clear-points">Clear All</button>
+        </div>
+        
+        <div class="data-table">
+            <h3>Data Points</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>X</th>
+                        <th>Y</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table-body">
+                    <!-- Data points will be added here by javascript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
